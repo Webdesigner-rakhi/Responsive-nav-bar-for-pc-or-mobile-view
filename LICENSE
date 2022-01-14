@@ -1,21 +1,112 @@
-MIT License
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0%; padding:0%; }
+        .wrapper{background-color: #233077;  width:100%;  }
+        .logo{width:20%; height:auto; padding:1% 4%; }
+    
+    nav ul {float:right;   margin:18px 0;  width:55%; margin-right: 10px;}
+    nav ul li{list-style: none;  position:relative; display:inline-block;}
+    nav ul li a{text-decoration: none; padding:15px 30px; color:white; display:block;}
+    nav ul ul{display:none; background-color: rgb(99, 99, 99);  width:100%;   position: absolute; top:30%; }
+    nav ul li:hover >ul{display:block; list-style: none;}
+    nav ul ul li{display:list-item;    border-bottom: 2px solid #233077; } 
+    nav ul ul li a{ display:block; padding: 15% 15%;}
+    nav ul ul ul{position:absolute; left:102%;  }
+    .hamburger{display:none; color:white; margin:5% 10%;}
+    .dropdown-nav{ background: rgb(99, 99, 99); display:none; width:29%; float:right; margin-right: 1px; top:08%; }
+    .dropdown-nav ul li{list-style: none;  border-bottom: 2px solid #233077;}
+  .dropdown-nav ul li a{text-decoration: none; padding:15px 30px; color:white; display:block; }
+  .dropdown-nav ul ul{display:none; background: rgb(99, 99, 99);  }
+  .dropdown-nav ul li:hover >ul{display:block; list-style: none; position: absolute; right:29.5%; top:20%;}
+  .dropdown-nav ul ul li:hover>ul{position: absolute;  right:151px; top:50px; }
 
-Copyright (c) 2022 Webdesigner-rakhi
+  @media(max-width:600px) {
+        .hamburger{ display:block; float:right; }
+        .logo{padding:5% 4%;}
+        nav ul {display:none;}
+         .dropdown-nav{display:none;  } 
+        
+    }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+</head>
+<body>
+    <div class="wrapper">
+    <nav>        
+           <img class="logo" src="Converge-Construction-Company-Logo1.jpg" alt="" width="100%" height="100px">
+             <ul>
+                <li><a href="#"> HOME </a></li>
+                <li><a href="#"> TUTORIALS</a>
+                <ul>
+                <li><a href="#"> PYTHON</a></li>
+                <li><a href="#"> JAVASCRIPT</a></li>
+                <li><a href="#"> JQUERY</a></li>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+                </ul>
+                </li>
+                <li><a href="#"> WEB DESIGN</a>
+                <ul>
+                <li><a href="#">FRONT END</a></li>
+                <li><a href="#"> BACK END</a>
+                <ul>
+                <li><a href="#"> WORKS</a></li>
+                <li><a href="#"> LINKS</a></li>
+                <li><a href="#"> STATUS </a></li>
+             </ul>
+             </li>
+             </ul>
+                </li>
+                <li><a href="#"> CONTACT</a></li>
+                <li><a href="#"> FEEDBACK </a></li>
+             </ul>
+  <div class="hamburger"> <i class="fas fa-bars" ></i> </div>
+    </nav>
+    <div class="dropdown-nav">
+        <ul>
+          <li><a href="#"> HOME </a></li>
+          <li><a href="#"> TUTORIALS</a>
+          <ul>
+          <li><a href="#"> PYTHON</a></li>
+          <li><a href="#"> JAVASCRIPT</a></li>
+          <li><a href="#"> JQUERY</a></li>
+      
+          </ul>
+          </li>
+          <li><a href="#"> WEB DESIGN</a>
+          <ul>
+          <li><a href="#">FRONT END</a></li>
+          <li><a href="#"> BACK END</a>
+          <ul>
+          <li><a href="#"> WORKS</a></li>
+          <li><a href="#"> LINKS</a></li>
+          <li><a href="#"> STATUS </a></li>
+      
+          </ul>
+          </li>
+      
+          </ul>
+          </li>
+          <li><a href="#"> CONTACT</a></li>
+          <li><a href="#"> FEEDBACK </a></li>
+      
+      </ul>
+      </div>
+   </div>
+   <script src="jquery-3.6.0.min.js">  </script>
+   <script> 
+   $(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(".dropdown-nav").slideToggle( "2000");
+  }); 
+});
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+  </script>
+</body>
+</html>
